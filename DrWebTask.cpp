@@ -2,10 +2,12 @@
 
 char *TrimRight( char *s )
 {
-	//Если строка пустая, выходим из функции
+	//Если строка пустая
 	if( !*s )
 	{
-		return NULL;
+		//То передаём строку с одним символом
+		char *TrimmedString = MakeString( 1 );
+		return TrimmedString;
 	}
 
 	//Счётчик количества элементов
@@ -27,25 +29,25 @@ char *TrimRight( char *s )
 	//Смещаем назад указатель до первого не символа пробела
 	do	
 	{
+		//Если указатель вышел за пределы строки слева, выходим из цикла
+		if( Pointer < s )
+		{
+			break;
+		}
 		Pointer--;
 	}while( *Pointer == ' ' );
 	//Вычисляем итоговую длинну строки с учётом нулевого символа
-	Count = ( Pointer - s ) + 1;
+	Count = Pointer - s + 2;
 	//Если длинна строки меньше двух
 	if( Count < 2 )
 	{
 		//То передаём строку с одним символом
-		char *TrimmedString;
-		TrimmedString = new char[ 1 ];
-		TrimmedString[ 0 ] = '\0';
+		char *TrimmedString = MakeString( 1 );
 		return TrimmedString;
 	}
 
 	//Создаём строку
-	char *TrimmedString;
-	TrimmedString = new char[ Count ];
-	//Указываем последнему элементу символ конца строки
-	TrimmedString[ Count ] = '\0';
+	char *TrimmedString = MakeString( Count );
 	//Создаём новый указатель для новой строки для копирования
 	char *NewPointer = TrimmedString;
 
@@ -64,10 +66,12 @@ char *TrimRight( char *s )
 
 char *TrimLeftRight( char *s )
 {
-	//Если строка пустая, выходим из функции
+	//Если строка пустая
 	if( !*s )
 	{
-		return NULL;
+		//То передаём строку с одним символом
+		char *TrimmedString = MakeString( 1 );
+		return TrimmedString;
 	}
 	//Счётчик количества элементов
 	unsigned long long Count = 0;
@@ -75,7 +79,7 @@ char *TrimLeftRight( char *s )
 	char *End = s, *Start = s;
 	//Запускаем цикл
 	while( *End )
-	{
+	{		
 		//Если символ конец строки, прерываем цикл
 		if( *End == '\n' )
 		{
@@ -91,25 +95,25 @@ char *TrimLeftRight( char *s )
 	//Смещаем назад указатель до первого не символа пробела
 	do	
 	{
+		//Если адреса сравнялись, выходим из цикла
+		if( Start == End )
+		{
+			break;
+		}
 		End--;
 	}while( *End == ' ' );
 	//Вычисляем итоговую длинну строки с учётом нулевого символа
-	Count = ( End - Start ) + 1;
+	Count = ( End - Start ) + 2;
 	//Если длинна строки меньше двух
 	if( Count < 2 )
 	{
 		//То передаём строку с одним символом
-		char *TrimmedString;
-		TrimmedString = new char[ 1 ];
-		TrimmedString[ 0 ] = '\0';
+		char *TrimmedString = MakeString( 1 );
 		return TrimmedString;
 	}
 
 	//Создаём строку
-	char *TrimmedString;
-	TrimmedString = new char[ Count ];
-	//Указываем последнему элементу символ конца строки
-	TrimmedString[ Count ] = '\0';
+	char *TrimmedString = MakeString( Count );
 	//Создаём новый указатель для новой строки для копирования
 	char *NewPointer = TrimmedString;
 
@@ -128,10 +132,12 @@ char *TrimLeftRight( char *s )
 
 char *TrimSpace( char *s )
 {
-	//Если строка пустая, выходим из функции
+	//Если строка пустая
 	if( !*s )
 	{
-		return NULL;
+		//То передаём строку с одним символом
+		char *TrimmedString = MakeString( 1 );
+		return TrimmedString;
 	}
 
 	//Счётчик количества элементов
@@ -159,17 +165,12 @@ char *TrimSpace( char *s )
 	if( Count < 2 )
 	{
 		//То передаём строку с одним символом
-		char *TrimmedString;
-		TrimmedString = new char[ 1 ];
-		TrimmedString[ 0 ] = '\0';
+		char *TrimmedString = MakeString( 1 );
 		return TrimmedString;
 	}
 
 	//Создаём строку
-	char *TrimmedString;
-	TrimmedString = new char[ Count ];
-	//Указываем последнему элементу символ конца строки
-	TrimmedString[ Count ] = '\0';
+	char *TrimmedString = MakeString( Count );
 	//Создаём новый указатель для новой строки для копирования
 	char *NewPointer = TrimmedString;
 
@@ -187,4 +188,15 @@ char *TrimSpace( char *s )
 		Pointer++;
 	}
 	return TrimmedString;
+}
+
+char *MakeString( unsigned long long Length001 )
+{
+	//Создаём строку
+	char *NewString;
+	NewString = new char[ Length001 ];
+	//Указываем последнему элементу символ конца строки
+	NewString[ Length001 - 1 ] = '\0';
+	//Передаём
+	return NewString;
 }
