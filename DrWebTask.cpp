@@ -20,19 +20,26 @@ char *TrimRight( char *s )
 		if( *Pointer == '\n' )
 		{
 			break;
-		}
-		Count++;		
+		}		
 		Pointer++;
 	}
-
+	
 	//Смещаем назад указатель до первого не символа пробела
 	do	
 	{
-		Count--;
 		Pointer--;
 	}while( *Pointer == ' ' );
-	//Увеличиваем счётчик для создания строки на единицу больше и добавления туда символа конца строки
-	Count++;
+	//Вычисляем итоговую длинну строки с учётом нулевого символа
+	Count = ( Pointer - s ) + 1;
+	//Если длинна строки меньше двух
+	if( Count < 2 )
+	{
+		//То передаём строку с одним символом
+		char *TrimmedString;
+		TrimmedString = new char[ 1 ];
+		TrimmedString[ 0 ] = '\0';
+		return TrimmedString;
+	}
 
 	//Создаём строку
 	char *TrimmedString;
@@ -84,13 +91,19 @@ char *TrimLeftRight( char *s )
 	//Смещаем назад указатель до первого не символа пробела
 	do	
 	{
-		Count--;
 		End--;
 	}while( *End == ' ' );
-	//Вычисляем количество элементов
-	Count = End - Start;
-	//Увеличиваем счётчик для создания строки на единицу больше и добавления туда символа конца строки
-	Count++;
+	//Вычисляем итоговую длинну строки с учётом нулевого символа
+	Count = ( End - Start ) + 1;
+	//Если длинна строки меньше двух
+	if( Count < 2 )
+	{
+		//То передаём строку с одним символом
+		char *TrimmedString;
+		TrimmedString = new char[ 1 ];
+		TrimmedString[ 0 ] = '\0';
+		return TrimmedString;
+	}
 
 	//Создаём строку
 	char *TrimmedString;
@@ -140,7 +153,17 @@ char *TrimSpace( char *s )
 			Count++;
 		}
 		Pointer++;
-	}	
+	}
+
+	//Если длинна строки меньше двух
+	if( Count < 2 )
+	{
+		//То передаём строку с одним символом
+		char *TrimmedString;
+		TrimmedString = new char[ 1 ];
+		TrimmedString[ 0 ] = '\0';
+		return TrimmedString;
+	}
 
 	//Создаём строку
 	char *TrimmedString;
