@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Lib">
+      <UniqueIdentifier>{ba72bff2-c6bb-400a-82d2-a778ee0bdc18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Lib\Arrays">
+      <UniqueIdentifier>{4fabebd0-ed86-44aa-95b6-f690d0813eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Lib">
+      <UniqueIdentifier>{f82a029f-a2e9-44a8-bbe2-3c7de7dfcbc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Lib\Arrays">
+      <UniqueIdentifier>{5b8da501-03a5-4640-9efa-6d0dd30ed28c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\States">
+      <UniqueIdentifier>{56684c3e-23ac-4028-b382-6a0eae1cbe85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\States">
+      <UniqueIdentifier>{79b21d87-44cd-45aa-92ab-5f00f185c4d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Game">
+      <UniqueIdentifier>{ba9bffb3-f068-439c-b558-f03f2b8f084a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Game">
+      <UniqueIdentifier>{0d845bcd-30da-4ab6-a808-eb4fdaa1b17c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Objects">
+      <UniqueIdentifier>{5eeaf0d0-fc7f-45f2-8358-d914f536cb05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Objects">
+      <UniqueIdentifier>{40b6150a-d797-4e48-8365-d5b3e2bb3056}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="GamesStates.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Arrays\Arrays.h">
+      <Filter>Заголовочные файлы\Lib\Arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Functions001.h">
+      <Filter>Заголовочные файлы\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Structures.h">
+      <Filter>Заголовочные файлы\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameFunctions.h">
+      <Filter>Заголовочные файлы\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Intro.h">
+      <Filter>Заголовочные файлы\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Object.h">
+      <Filter>Заголовочные файлы\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Menu.h">
+      <Filter>Заголовочные файлы\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Value.h">
+      <Filter>Заголовочные файлы\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Level.h">
+      <Filter>Заголовочные файлы\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Timer.h">
+      <Filter>Заголовочные файлы\Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="SnakeCo.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Arrays\Array1D.cpp">
+      <Filter>Файлы исходного кода\Lib\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Arrays\Array1DStrII.cpp">
+      <Filter>Файлы исходного кода\Lib\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Arrays\Array2D.cpp">
+      <Filter>Файлы исходного кода\Lib\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GameFunctions.cpp">
+      <Filter>Файлы исходного кода\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Intro.cpp">
+      <Filter>Файлы исходного кода\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Menu.cpp">
+      <Filter>Файлы исходного кода\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Value.cpp">
+      <Filter>Файлы исходного кода\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Level.cpp">
+      <Filter>Файлы исходного кода\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Functions.cpp">
+      <Filter>Файлы исходного кода\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Timer.cpp">
+      <Filter>Файлы исходного кода\Objects</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
